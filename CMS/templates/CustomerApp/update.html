@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>update user</title>
+{% endblock %}
+
+{% block content %}
+<h2>Update User Profile</h2>
+<form method="post">
+  {% csrf_token %}
+  <input type="text" name="username" value="{{ user.username }}" placeholder="Username"><br><br>
+  <input type="email" name="email" value="{{ user.email }}" placeholder="Email"><br><br>
+  <input type="text" name="address" value="{{ user.custom_user.address }}" placeholder="Address"><br><br>
+  <input type="text" name="phone_no" value="{{ user.custom_user.phone_no }}" placeholder="Phone Number"><br><br>
+  <input type="text" name="profile_pic" value="{{ user.custom_user.profile_pic }}" placeholder="Profile Picture URL"><br><br>
+  <input type="submit" value="Update">
+</form>
+{% endblock %}

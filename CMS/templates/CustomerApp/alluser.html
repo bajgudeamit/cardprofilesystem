@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>My Template</title>
+{% endblock %}
+{% block content %}
+    <ul>
+        {% for item in data %}
+            <li>{{ item.user.username }}</li>
+            <li>{{ item.user.email }}</li>
+            <li>{{ item.address }}</li>
+            <li>{{ item.phone_no }}</li>
+            <li>{{ item.url }}</li>
+        {% endfor %}
+    </ul>
+{% endblock%}
